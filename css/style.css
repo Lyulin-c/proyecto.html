@@ -1,0 +1,87 @@
+:root{
+    --primary-color: #FF743B;
+    --border-color: #ededed;
+    --img-example-bcg: #ddd;
+    --btn-correct-color: #2196F3;
+    --btn-error-color: #f44336;
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.contenedor{
+    display: grid;
+    grid-template-columns: 15vw minmax(50vw, auto);
+    grid-template-rows: 5vh minmax(80vh, auto) 5vh;
+    grid-gap: 15px;
+    grid-template-areas: "header header" 
+                        "menu contenido" 
+                        "footer footer";
+}
+
+header{
+    grid-area: header;
+}
+
+div.menu{
+    grid-area: menu;
+    overflow: hidden;
+}
+
+main{
+    grid-area: contenido;
+    padding-inline: 1em;
+}
+
+footer{
+    grid-area: footer;
+}
+
+ul.nav{
+    border-block: 1px solid var(--border-color);
+    display: flex;
+    list-style: none;
+}
+
+header ul.nav, footer ul.nav{
+    align-items: center;
+    justify-content: end;
+    padding: .5em 1em;
+}
+
+.menu ul.nav{
+    border-inline: 1px solid var(--border-color);
+    flex-direction: column;
+    margin-left: 1em;
+    height: 100%;
+}
+
+header ul.nav .nav-item:first-child, footer ul.nav .nav-item:first-child{
+    margin-right: auto;
+}
+
+ul.nav li.nav-item {
+    padding-inline: .5em;
+}
+
+.menu ul.nav li.nav-item {
+    padding: .5em 1em;
+    width: 100%;
+}
+
+.menu ul.nav li.nav-item:hover {
+    background-color: var(--border-color);
+}
+
+ul.nav li.nav-item a {
+    text-decoration: none;
+    color: black;
+}
+
+ul.nav li.nav-item a:hover {
+    color: var(--primary-color);
+}

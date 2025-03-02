@@ -1,0 +1,78 @@
+.lista-equipos {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.lista-equipos thead {
+    text-align: left;
+}
+
+.lista-equipos th, .lista-equipos td {
+    padding: 1em;
+}
+
+.lista-equipos tbody tr {
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+}
+
+.lista-equipos tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.equipo {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.img {
+    align-items: center;
+    background-color: var(--img-example-bcg);
+    display: flex;
+    justify-content: center;
+    min-width: 100px;
+    min-height: 40px;
+}
+
+.equipo-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.departamento {
+    font-size: 0.5em;
+}
+
+button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.agregar{
+    background-color: #4CAF50;
+    width: 100%;
+}
+
+.editar {
+    background-color: var(--btn-correct-color);
+    width: 48%;
+}
+
+.borrar {
+    background-color: var(--btn-error-color);
+    width: 48%;
+}
+
+@media (max-width:768px) {
+    .editar {
+        width: 100%;
+    }
+    
+    .borrar {
+        width: 100%;
+    }
+}
